@@ -24,10 +24,23 @@ public class Arrays {
         androidVersions[1] = "Banana Bread";
         androidVersions[2] = "Cupcake";
         androidVersions[3] = "Donut";
-        System.out.println(androidVersions[0]);
-        System.out.println(androidVersions[1]);
-        System.out.println(androidVersions[2]);
-        System.out.println(androidVersions[3]);
+
+        // Bucle for
+        System.out.println("-- Bucle for --");
+        for (int i = 0; i < androidVersions.length; i++) {
+            if (androidVersions[i] != null) {
+                System.out.println(androidVersions[i]);
+            }
+        }
+        System.out.println("-- Bucle for each --");
+        // Bucle for each
+        for (String androidVersion : androidVersions) {
+            if (androidVersion != null) {
+                System.out.println(androidVersion);
+            }
+        }
+
+        System.out.println("---------------");
 
         cities[0][0] = "Colombia";
         cities[0][1] = "Medellín";
@@ -38,19 +51,25 @@ public class Arrays {
         cities[3][0] = "México";
         cities[3][1] = "CDMX";
 
-        System.out.println(cities[0][0]);
-        System.out.println(cities[0][1]);
-        System.out.println(cities[1][0]);
-        System.out.println(cities[1][1]);
-        System.out.println(cities[2][0]);
-        System.out.println(cities[2][1]);
-        System.out.println(cities[3][0]);
-        System.out.println(cities[3][1]);
+        // Bucle for
+        System.out.println("-- Bucle for --");
+        for (int i = 0; i < cities.length; i++) {
+            for (int j = 0; j < cities[i].length; j++) {
+                System.out.println(cities[i][j]);
+            }
+        }
+        System.out.println("-- Bucle for each --");
+        // Bucle for each
+        for (String[] pair : cities ) {
+            for (String name : pair ) {
+                System.out.println(name);
+            }
+        }
+
+        System.out.println("---------------");
 
         String[][][][] animals = new String[2][3][2][2];
         animals[1][0][0][1] = "Monkey";
-        System.out.println("---");
         System.out.println(animals[1][0][0][1]);
-        System.out.println("---");
     }
 }
